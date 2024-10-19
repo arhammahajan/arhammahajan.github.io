@@ -6,7 +6,34 @@
     <description>Recent content in Posts on Arham Mahajan</description>
     <generator>Hugo -- 0.134.3</generator>
     <language>en-us</language>
-    <lastBuildDate></lastBuildDate>
+    <lastBuildDate>Sat, 19 Oct 2024 12:45:33 +0530</lastBuildDate>
     <atom:link href="https://arhammahajan.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The Newton-Cotes Integration Formulae</title>
+      <link>https://arhammahajan.github.io/posts/my-first-post/</link>
+      <pubDate>Sat, 19 Oct 2024 12:45:33 +0530</pubDate>
+      <guid>https://arhammahajan.github.io/posts/my-first-post/</guid>
+      <description>&lt;p&gt;&lt;em&gt;The general idea behind the Newton-Cotes integration formulae,&lt;/em&gt;
+&lt;/p&gt;
+$$\begin{equation} \label{gformula}
+I=\int_{a}^{b}f(x)dx \approx \int_{a}^{b}f_{n}(x)dx
+\end{equation}$$&lt;p&gt;where \(f_{n}(x)\) is the \(n^{th}\) order interpolating polynomial
+&lt;/p&gt;
+$$f_{n}(x) = a_0 + a_1x + \ldots + a_{n-1}x^{n-1} + a_nx^n$$&lt;p&gt;
+&lt;em&gt;Using, Lagrange&amp;rsquo;s interpolating polynomial \(L(x)\), such that \(L(x) = f_n(x)\)&lt;/em&gt;
+&lt;/p&gt;
+$$
+\begin{equation}
+L(x) = l_0(x)f(x_0) + l_1(x)f(x_1) + \ldots + l_{n}(x)f(x_{n}),
+\end{equation}
+$$&lt;p&gt;
+&lt;em&gt;where \(l_0(x),l_1(x),\ldots,l_{n}(x)\) represent Langrange&amp;rsquo;s fundamental polynomials&lt;/em&gt;&lt;br&gt;
+Substituing \(L(x)\) into \(\ref{gformula}\)&lt;/p&gt;
+$$\begin{align} \label{derivation}
+I=\int_{a}^{b}f(x)dx \approx \int_{a}^{b}L(x)dx &amp;= \int_{a}^{b}(\sum_{i=0}^{n}l_i(x)f(x_i))dx\\
+&amp;=\sum_{i=0}^{n}f(x_i)\underbrace{\int_a^b l_i(x) \, dx}_{w_i}
+\end{align}$$&lt;p&gt;&lt;em&gt;Therefore,&lt;/em&gt;
+&lt;/p&gt;</description>
+    </item>
   </channel>
 </rss>

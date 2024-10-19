@@ -173,6 +173,22 @@
     </nav>
 </header>
 <main class="main"> 
+
+<article class="first-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">The Newton-Cotes Integration Formulae
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>The general idea behind the Newton-Cotes integration formulae, $$\begin{equation} \label{gformula} I=\int_{a}^{b}f(x)dx \approx \int_{a}^{b}f_{n}(x)dx \end{equation}$$where \(f_{n}(x)\) is the \(n^{th}\) order interpolating polynomial $$f_{n}(x) = a_0 &#43; a_1x &#43; \ldots &#43; a_{n-1}x^{n-1} &#43; a_nx^n$$ Using, Lagrange’s interpolating polynomial \(L(x)\), such that \(L(x) = f_n(x)\) $$ \begin{equation} L(x) = l_0(x)f(x_0) &#43; l_1(x)f(x_1) &#43; \ldots &#43; l_{n}(x)f(x_{n}), \end{equation} $$ where \(l_0(x),l_1(x),\ldots,l_{n}(x)\) represent Langrange’s fundamental polynomials
+Substituing \(L(x)\) into \(\ref{gformula}\)
+$$\begin{align} \label{derivation} I=\int_{a}^{b}f(x)dx \approx \int_{a}^{b}L(x)dx &amp;= \int_{a}^{b}(\sum_{i=0}^{n}l_i(x)f(x_i))dx\\ &amp;=\sum_{i=0}^{n}f(x_i)\underbrace{\int_a^b l_i(x) \, dx}_{w_i} \end{align}$$Therefore, ...</p>
+  </div>
+  <footer class="entry-footer"><span title='2024-10-19 12:45:33 +0530 IST'>October 19, 2024</span>&nbsp; &#9679;
+    1 min read
+  </footer>
+  <a class="entry-link" aria-label="post link to The Newton-Cotes Integration Formulae" href="https://arhammahajan.github.io/posts/my-first-post/"></a>
+</article>
     </main>
     
 <footer class="footer">
