@@ -198,8 +198,8 @@ I=\int_{a}^{b}f(x)dx \approx \int_{a}^{b}L(x)dx &= \int_{a}^{b}\left(\sum_{i=0}^
   "keywords": [
     
   ],
-  "articleBody": "The general idea behind the Newton-Cotes integration formulae, $$\\begin{equation} \\label{gformula} I=\\int_{a}^{b}f(x)dx \\approx \\int_{a}^{b}f_{n}(x)dx \\end{equation}$$where \\(f_{n}(x)\\) is the \\(n^{th}\\) order interpolating polynomial $$f_{n}(x) = a_0 + a_1x + \\ldots + a_{n-1}x^{n-1} + a_nx^n$$ Using, Lagrange’s interpolating polynomial \\(L(x)\\), such that \\(L(x) = f_n(x)\\) $$ \\begin{equation} L(x) = l_0(x)f(x_0) + l_1(x)f(x_1) + \\ldots + l_{n}(x)f(x_{n}), \\end{equation} $$ where \\(l_0(x),l_1(x),\\ldots,l_{n}(x)\\) represent Langrange’s fundamental polynomials\nSubstituing \\(L(x)\\) into \\(\\ref{gformula}\\)\n$$\\begin{align} \\label{derivation} I=\\int_{a}^{b}f(x)dx \\approx \\int_{a}^{b}L(x)dx \u0026= \\int_{a}^{b}\\left(\\sum_{i=0}^{n}l_i(x)f(x_i)\\right)dx\\\\ \u0026=\\sum_{i=0}^{n}f(x_i)\\underbrace{\\int_a^b l_i(x) \\, dx}_{w_i} \\end{align}$$Therefore, $$\\begin{equation} \\label{quadformula} I=\\int_{a}^{b}f(x)dx \\approx \\sum_{i=0}^nw_if(x_i), \\end{equation}$$ This is the general form of the Newton-Cotes quadrature formulae\nDefinition: General Newton-Cotes Quadrature $$\\begin{equation} I=\\int_{a}^{b}f(x)dx \\approx \\sum_{i=0}^nw_if(x_i), \\end{equation}$$ where $w_i$ are the weights, which can be computed as the integrals of Lagrange's fundamental polynomials The Newton-Cotes quadrature methods can be classified into the open as well as the closed form\nDefinition: Closed Form Data points at the beginning as well as the end of the limits of integration are known $$\\begin{equation} \\label{ncclosed} y_{i+1} = y_{i-n+1} + \\int_{x_{i-n+1}}^{x_{i+1}}f_n(x)dx \\end{equation}$$ Definition: Open Form Limits of integration extend beyond the range of data $$\\begin{equation} \\label{ncopen} y_{i+1} = y_{i-n} + \\int_{x_{i-n}}^{x_{i+1}}f_n(x)dx, \\end{equation}$$ in such a case, the integral over the rest of the function segments is computed through extrapolation Trapezoidal Rule It is a closed form of the Newton-Cotes quadrature\nCan be obtained by substituting $n=1$ in $\\ref{ncclosed}$\nDerivation: Trapezoidal Rule, using Lagrange's interpolating polynomial ",
-  "wordCount" : "225",
+  "articleBody": "The general idea behind the Newton-Cotes integration formulae, $$\\begin{equation} \\label{gformula} I=\\int_{a}^{b}f(x)dx \\approx \\int_{a}^{b}f_{n}(x)dx \\end{equation}$$where \\(f_{n}(x)\\) is the \\(n^{th}\\) order interpolating polynomial $$f_{n}(x) = a_0 + a_1x + \\ldots + a_{n-1}x^{n-1} + a_nx^n$$ Using, Lagrange’s interpolating polynomial \\(L(x)\\), such that \\(L(x) = f_n(x)\\) $$ \\begin{equation} L(x) = l_0(x)f(x_0) + l_1(x)f(x_1) + \\ldots + l_{n}(x)f(x_{n}), \\end{equation} $$ where \\(l_0(x),l_1(x),\\ldots,l_{n}(x)\\) represent Langrange’s fundamental polynomials\nSubstituing \\(L(x)\\) into \\(\\ref{gformula}\\)\n$$\\begin{align} \\label{derivation} I=\\int_{a}^{b}f(x)dx \\approx \\int_{a}^{b}L(x)dx \u0026= \\int_{a}^{b}\\left(\\sum_{i=0}^{n}l_i(x)f(x_i)\\right)dx\\\\ \u0026=\\sum_{i=0}^{n}f(x_i)\\underbrace{\\int_a^b l_i(x) \\, dx}_{w_i} \\end{align}$$Therefore, $$\\begin{equation} \\label{quadformula} I=\\int_{a}^{b}f(x)dx \\approx \\sum_{i=0}^nw_if(x_i), \\end{equation}$$ This is the general form of the Newton-Cotes quadrature formulae\nDefinition: General Newton-Cotes Quadrature $$\\begin{equation} \\label{ncform} I=\\int_{a}^{b}f(x)dx \\approx \\sum_{i=0}^nw_if(x_i), \\end{equation}$$ where $w_i$ are the weights, which can be computed as the integrals of Lagrange's fundamental polynomials The Newton-Cotes quadrature methods can be classified into the open as well as the closed form\nDefinition: Closed Form Data points at the beginning as well as the end of the limits of integration are known $$\\begin{equation} \\label{ncclosed} y_{i+1} = y_{i-n+1} + \\int_{x_{i-n+1}}^{x_{i+1}}f_n(x)dx \\end{equation}$$ Definition: Open Form Limits of integration extend beyond the range of data $$\\begin{equation} \\label{ncopen} y_{i+1} = y_{i-n} + \\int_{x_{i-n}}^{x_{i+1}}f_n(x)dx, \\end{equation}$$ in such a case, the integral over the rest of the function segments is computed through extrapolation Trapezoidal Rule It is a closed form of the Newton-Cotes quadrature\nCan be obtained by substituting $n=1$ in $\\ref{ncclosed}$\nDerivation: Trapezoidal Rule, using Lagrange's interpolating polynomial $$\\begin{equation} \\label{gentrap} I = \\int_a^bf(x)dx \\approx \\int_a^bf_1(x)dx \\end{equation}$$ where $f_1(x)$ is the first order Lagrange interpolating polynomial $$\\begin{align*} f_1(x) \u0026= f(a) + \\frac{f(b)-f(a)}{b-a}(x-a)\\\\ \u0026=\\frac{f(b)-f(a)}{b-a}x + f(a) - \\frac{af(b)-af(a)}{b-a} \\\\ \\vdots \\\\ \u0026= \\frac{f(b)-f(a)}{b-a} + \\frac{bf(a)-af(b)}{b-a}\\\\ \\end{align*}$$ substituting $f_1(x)$ in \\ref{gentrap} $$\\begin{align} I \u0026= \\left.\\frac{f(b)-f(a)}{b-a}\\frac{x^2}{2}\\right|_a^b + \\left.\\frac{bf(a)-af(b)}{b-a}x\\right|_a^b\\\\ \u0026= \\frac{f(b)-f(a)}{b-a}\\left(\\frac{b^2-a^2}{2}\\right) + \\frac{bf(a)-af(b)}{b-a}(b-a)\\\\ \\vdots \\\\ I \u0026= \\underbrace{\\left(\\frac{b-a}{2}\\right)}_{h}[f(a)+f(b)], \\end{align}$$ which fits into the forms described in both $\\ref{ncform}$ and $\\ref{ncclosed}$ Simpson’s $1/3^{rd}$ Rule The trapezoidal rule gives very high error for higher order polnomials, to rectify this problem Simpson’s rule employs a 2nd order interpolating polynomial\nDerivation: Simpson's Rule, using Lagrange's Interpolation $$\\begin{equation} \\label{gensimp1} I = \\int_{x_0}^{x_2}f(x)dx \\approx \\int_{x_0}^{x_2}f_2(x)dx \\end{equation}$$ where $f_2(x)$ is Lagrange's second order interpolating polynomial $$x_0 = a, x_2 = b$$ $$\\begin{align*} f_2(x) = \\frac{(x-x_1)(x-x_2)}{(x_0-x_1)(x_0-x_2)}f(x_0) + \\frac{(x-x_0)(x-x_2)}{(x_1-x_0)(x_1-x_2)}f(x_1) \\\\+ \\frac{(x-x_0)(x-x_1)}{(x_2-x_0)(x_2-x_1)}f(x_2) \\end{align*}$$ substituting $f_1(x)$ in \\ref{gensimp1} $$\\begin{align*} I \\approx \\int_{x_0}^{x_2}\\left[\\frac{(x-x_1)(x-x_2)}{(x_0-x_1)(x_0-x_2)}f(x_0) + \\frac{(x-x_0)(x-x_2)}{(x_1-x_0)(x_1-x_2)}f(x_1)\\right. \\\\+ \\left.\\frac{(x-x_0)(x-x_1)}{(x_2-x_0)(x_2-x_1)}f(x_2)\\right] \\end{align*}$$ $$\\begin{equation} I \\approx \\frac{h}{3}[f(x_0) + 4f(x_1) + f(x_2)] \\end{equation}$$ ",
+  "wordCount" : "378",
   "inLanguage": "en",
   "datePublished": "2024-10-19T12:45:33+05:30",
   "dateModified": "2024-10-19T12:45:33+05:30",
@@ -296,7 +296,7 @@ $$
 L(x) = l_0(x)f(x_0) + l_1(x)f(x_1) + \ldots + l_{n}(x)f(x_{n}),
 \end{equation}
 $$<p>
-<em>where \(l_0(x),l_1(x),\ldots,l_{n}(x)\) represent Langrange&rsquo;s fundamental polynomials</em><br>
+<em>where \(l_0(x),l_1(x),\ldots,l_{n}(x)\) represent <a href="https://en.wikipedia.org/wiki/Lagrange_polynomial">Langrange&rsquo;s fundamental polynomials</a></em><br>
 Substituing \(L(x)\) into \(\ref{gformula}\)</p>
 $$\begin{align} \label{derivation}
 I=\int_{a}^{b}f(x)dx \approx \int_{a}^{b}L(x)dx &= \int_{a}^{b}\left(\sum_{i=0}^{n}l_i(x)f(x_i)\right)dx\\
@@ -310,7 +310,7 @@ I=\int_{a}^{b}f(x)dx \approx \sum_{i=0}^nw_if(x_i),
 <section class="definition-box">
     <span class="legend">Definition: General Newton-Cotes Quadrature</span>
     <p>
-$$\begin{equation}
+$$\begin{equation} \label{ncform}
 I=\int_{a}^{b}f(x)dx \approx \sum_{i=0}^nw_if(x_i),
 \end{equation}$$
 where $w_i$ are the weights, which can be computed as the integrals of <a href="https://en.wikipedia.org/wiki/Lagrange_polynomial" target="_blank">Lagrange's fundamental polynomials</a>
@@ -347,6 +347,49 @@ Can be obtained by substituting $n=1$ in $\ref{ncclosed}$</p>
 <section class="derivation-box">
     <span class="legend">Derivation: Trapezoidal Rule, using Lagrange&#39;s interpolating polynomial</span>
     <p>
+$$\begin{equation} \label{gentrap}
+I = \int_a^bf(x)dx \approx \int_a^bf_1(x)dx
+\end{equation}$$
+<i>where $f_1(x)$ is the first order Lagrange interpolating polynomial</i>
+$$\begin{align*}
+f_1(x) &= f(a) + \frac{f(b)-f(a)}{b-a}(x-a)\\
+&=\frac{f(b)-f(a)}{b-a}x + f(a) - \frac{af(b)-af(a)}{b-a} \\
+\vdots \\
+&= \frac{f(b)-f(a)}{b-a} + \frac{bf(a)-af(b)}{b-a}\\
+\end{align*}$$
+<i>substituting $f_1(x)$ in \ref{gentrap} </i>
+$$\begin{align}
+I &= \left.\frac{f(b)-f(a)}{b-a}\frac{x^2}{2}\right|_a^b + \left.\frac{bf(a)-af(b)}{b-a}x\right|_a^b\\
+&= \frac{f(b)-f(a)}{b-a}\left(\frac{b^2-a^2}{2}\right) + \frac{bf(a)-af(b)}{b-a}(b-a)\\
+\vdots \\
+I &= \underbrace{\left(\frac{b-a}{2}\right)}_{h}[f(a)+f(b)],
+\end{align}$$
+<i>which fits into the forms described in both $\ref{ncform}$ and $\ref{ncclosed}$</i>
+</p>
+</section>
+
+<h3 id="simpsons-13rd-rule">Simpson&rsquo;s $1/3^{rd}$ Rule<a hidden class="anchor" aria-hidden="true" href="#simpsons-13rd-rule">#</a></h3>
+<blockquote>
+<p>The trapezoidal rule gives very high error for higher order polnomials, to rectify this problem Simpson&rsquo;s rule employs a 2nd order interpolating polynomial</p>
+</blockquote>
+<section class="derivation-box">
+    <span class="legend">Derivation: Simpson&#39;s Rule, using Lagrange&#39;s Interpolation</span>
+    <p>
+$$\begin{equation} \label{gensimp1}
+I = \int_{x_0}^{x_2}f(x)dx \approx \int_{x_0}^{x_2}f_2(x)dx
+\end{equation}$$
+<i>where $f_2(x)$ is Lagrange's second order interpolating polynomial</i>
+$$x_0 = a, x_2 = b$$
+$$\begin{align*}
+f_2(x) = \frac{(x-x_1)(x-x_2)}{(x_0-x_1)(x_0-x_2)}f(x_0) + \frac{(x-x_0)(x-x_2)}{(x_1-x_0)(x_1-x_2)}f(x_1) \\+ \frac{(x-x_0)(x-x_1)}{(x_2-x_0)(x_2-x_1)}f(x_2)
+\end{align*}$$
+<i>substituting $f_1(x)$ in \ref{gensimp1} </i>
+$$\begin{align*}
+I \approx \int_{x_0}^{x_2}\left[\frac{(x-x_1)(x-x_2)}{(x_0-x_1)(x_0-x_2)}f(x_0) + \frac{(x-x_0)(x-x_2)}{(x_1-x_0)(x_1-x_2)}f(x_1)\right. \\+ \left.\frac{(x-x_0)(x-x_1)}{(x_2-x_0)(x_2-x_1)}f(x_2)\right]
+\end{align*}$$
+$$\begin{equation}
+I \approx \frac{h}{3}[f(x_0) + 4f(x_1) + f(x_2)]
+\end{equation}$$
 </p>
 </section>
 

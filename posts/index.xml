@@ -27,7 +27,7 @@ $$
 L(x) = l_0(x)f(x_0) + l_1(x)f(x_1) + \ldots + l_{n}(x)f(x_{n}),
 \end{equation}
 $$&lt;p&gt;
-&lt;em&gt;where \(l_0(x),l_1(x),\ldots,l_{n}(x)\) represent Langrange&amp;rsquo;s fundamental polynomials&lt;/em&gt;&lt;br&gt;
+&lt;em&gt;where \(l_0(x),l_1(x),\ldots,l_{n}(x)\) represent &lt;a href=&#34;https://en.wikipedia.org/wiki/Lagrange_polynomial&#34;&gt;Langrange&amp;rsquo;s fundamental polynomials&lt;/a&gt;&lt;/em&gt;&lt;br&gt;
 Substituing \(L(x)\) into \(\ref{gformula}\)&lt;/p&gt;
 $$\begin{align} \label{derivation}
 I=\int_{a}^{b}f(x)dx \approx \int_{a}^{b}L(x)dx &amp;= \int_{a}^{b}\left(\sum_{i=0}^{n}l_i(x)f(x_i)\right)dx\\
