@@ -6,14 +6,14 @@
         <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <script>
   MathJax = {
-    loader: {load: ['[tex]/tagformat']},
+    loader: {load: ['[tex]/tagformat', '[tex]/ams']},
     section: 1,
     tex: {
       tags:'ams',
-      packages: {'[+]' : ['tagformat', 'sections']},
+      packages: {'[+]' : ['tagformat', 'sections', 'ams']},
       tagformat: {
-        number: (n) => MathJax.config.section + '.' + n
-        
+        number: (n) => MathJax.config.section + '.' + n,
+        id: (tag) => 'eqn-id:' + tag
       },
       displayMath: [['\\[', '\\]'], ['$$', '$$']],  
       inlineMath: [['\\(', '\\)'],['$','$']]                  
@@ -42,6 +42,7 @@
   }
 };
 </script>
+
     <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
